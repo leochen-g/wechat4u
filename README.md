@@ -1,8 +1,10 @@
-# wechat4u.js
+# wechat4uos.js
 
-![](http://7xr8pm.com1.z0.glb.clouddn.com/nodeWechat.png) [![npm version](https://img.shields.io/npm/v/wechat4u.svg)](https://www.npmjs.org/package/wechat4u) [![wechat group](https://img.shields.io/badge/wechat-group-brightgreen.svg)](http://www.qr-code-generator.com/phpqrcode/getCode.php?cht=qr&chl=http%3A%2F%2Fweixin.qq.com%2Fg%2FA1zJ47b19KtgMnAx&chs=180x180&choe=UTF-8&chld=L|0)
+![](http://7xr8pm.com1.z0.glb.clouddn.com/nodeWechat.png) [![npm version](https://img.shields.io/npm/v/wechat4uos.svg)](https://www.npmjs.org/package/wechat4uos) [![wechat group](https://img.shields.io/badge/wechat-group-brightgreen.svg)](http://www.qr-code-generator.com/phpqrcode/getCode.php?cht=qr&chl=http%3A%2F%2Fweixin.qq.com%2Fg%2FA1zJ47b19KtgMnAx&chs=180x180&choe=UTF-8&chld=L|0)
 
-## Announcing wechat4u v0.7.10
+> fork[nodeWechat/wechat4u](https://github.com/nodeWechat/wechat4u) 后进行部分优化，来适配[wechaty-puppet-wechat4u](https://github.com/wechaty/puppet-wechat4u)，版本会继续在wechat4u上新增。npm 包名为`wechat4uos`
+
+## Announcing wechat4uos v0.7.10
 
 ### Features
 
@@ -14,6 +16,7 @@
 
 ### Changes
 
+- 优化心跳可以不用发送消息
 - 支持uos协议，所有微信均可使用，请先微信实名认证后使用
 - 发送消息的一类方法在成功时会返回完整响应数据
 - bot.user 对象中不再存储用户头像的 base64 数据
@@ -25,22 +28,22 @@
 ## 安装使用
 
 ```
-npm install --save wechat4u@latest
+npm install --save wechat4uos@latest
 ```
 
 ```javascript
-const Wechat = require('wechat4u')
+const Wechat = require('wechat4uos')
 let bot = new Wechat()
 bot.start()
 // 或使用核心API
-// const WechatCore = require('wechat4u/lib/core')
+// const WechatCore = require('wechat4uos/lib/core')
 ```
 
 ## 开发测试
 
 ```shell
-git clone https://github.com/nodeWechat/wechat4u.git
-cd wechat4u
+git clone https://github.com/leochen-g/wechat4uos.git
+cd wechat4uos
 npm install
 npm run core // 命令行模式
 npm run compile // babel编译
@@ -50,7 +53,7 @@ npm run compile // babel编译
 
 `node run-core.js`
 
-逻辑见[代码](https://github.com/nodeWechat/wechat4u/blob/master/run-core.js)，简明完整，一定要看
+逻辑见[代码](https://github.com/leochen-g/wechat4uos/blob/master/run-core.js)，简明完整，一定要看
 
 ## 实例化Wechat类
 
